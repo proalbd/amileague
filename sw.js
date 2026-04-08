@@ -5,6 +5,7 @@ const ASSETS = [
   './styles.css',
   './scripts.js',
   './assets/i-am-awami-league.png',
+  './assets/i-am-awami-league-2.png',
   './fonts/Kalpurush.ttf',
   './assets/favicon.ico',
   './assets/icon-192.png',
