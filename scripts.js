@@ -132,11 +132,6 @@ upload.addEventListener('change', (e) => {
 
             drawCanvas();
 
-            // Show Warning
-            const ua = navigator.userAgent || navigator.vendor || window.opera;
-            if (ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1) {
-               customAlert.style.display = 'flex';
-            }
          };
          userImg.src = event.target.result;
       };
@@ -196,6 +191,13 @@ downloadBtn.addEventListener('click', () => {
       customAlert.style.display = 'flex';
    }
 
+});
+
+// Facebook browser warning on page load
+window.addEventListener('DOMContentLoaded', () => {
+   if (/FBAN|FBAV/i.test(navigator.userAgent)) {
+      customAlert.style.display = 'flex';
+   }
 });
 
 
