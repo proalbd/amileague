@@ -38,7 +38,7 @@ const toBengaliNumber = (num) => {
 };
 
 function copyHashtag() {
-   navigator.clipboard.writeText('#IAamAwamiLeague')
+   navigator.clipboard.writeText('#আমিই_আওয়ামীলীগ')
       .then(() => {
          const n = document.createElement('div');
          n.innerHTML = `
