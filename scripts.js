@@ -11,7 +11,7 @@ const placeholder = document.getElementById('placeholder-text');
 const controlsPanel = document.getElementById('controls-panel');
 const customAlert = document.getElementById('custom-alert');
 
-const FRAME_URL = 'no-boat-no-vote.png';
+const FRAME_URL = 'assets/i-am-awami-league.png';
 
 let userImg = new Image();
 let frameImg = new Image();
@@ -38,7 +38,7 @@ const toBengaliNumber = (num) => {
 };
 
 function copyHashtag() {
-   navigator.clipboard.writeText('#NoBoatNoVote')
+   navigator.clipboard.writeText('#IAamAwamiLeague')
       .then(() => {
          const n = document.createElement('div');
          n.innerHTML = `
@@ -126,7 +126,7 @@ upload.addEventListener('change', (e) => {
             const scaleY = canvas.height / userImg.height;
             baseFitScale = Math.max(scaleX, scaleY);
 
-            zoomInput.value = 0.79;
+            zoomInput.value = 0.90;
             posXInput.value = 0;
             posYInput.value = 0;
 
@@ -185,7 +185,7 @@ downloadBtn.addEventListener('click', () => {
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'NoBoatNoVote_' + Date.now() + '.jpg';
+            a.download = 'IAmAwamiLeague_' + Date.now() + '.jpg';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);

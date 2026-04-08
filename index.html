@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Boat No Vote | DP Maker</title>
+    <title>I Am Awami League | DP Maker</title>
 	<meta property="og:image" content="og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="নৌকা ছাড়া কীসের ভোট? No Boat No Vote" />
-	<link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <meta property="og:image:alt" content="আমিই আওয়ামী লীগ" />
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="w-full bg-black/20 backdrop-blur-md border-b border-red-900/50 px-6 py-5">
+    <header class="w-full bg-black/20 backdrop-blur-md border-b border-green-900/50 px-6 py-5">
         <div class="container mx-auto flex justify-between items-center">
             <span class="text-1xl font-bold text-white tracking-tighter uppercase">Joy Bangla</span>
 			<svg viewBox="0 0 24 14" class="w-100% h-7 fill-current text-[#ffffff]" xmlns="http://www.w3.org/2000/2000/svg">
@@ -29,21 +30,21 @@
         <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
             
             <div class="lg:w-1/2 w-full text-center lg:text-left">
-                <h1 class="floating-text text-6xl md:text-8xl font-black leading-none tracking-tight text-white mb-6">
-                    NO BOAT <br> 
-                    <span class="text-gradient">NO VOTE</span>
+                <h1 class="floating-text text-4xl md:text-6xl font-black leading-none tracking-tight text-white mb-6">
+                    I am </br>					
+                    <span class="text-gradient">Awami League</span>
                 </h1>
-                <div class="h-1 w-32 bg-red-600 mx-auto lg:mx-0 rounded-full mb-6"></div>
-				<p>Chrome/Safari ব্রাউজারে ওপেন করুন। আপনার পছন্দের ছবিটি আপলোড করুন। সুন্দরভাবে ছবিটি বসানোর পর একদম নিচে ডাউনলোড বাটনে চাপ দিয়ে ❝নো বোট নো ভোট❞ ছবিটি ডাউনলোড করুন।</p>
+                <div class="h-1 w-32 bg-green-600 mx-auto lg:mx-0 rounded-full mb-6"></div>
+				<p>Chrome/Safari ব্রাউজারে ওপেন করুন। আপনার পছন্দের ছবিটি আপলোড করুন। সুন্দরভাবে ছবিটি বসানোর পর একদম নিচে ডাউনলোড বাটনে চাপ দিয়ে ❝আমি আওয়ামী লীগ❞ ছবিটি ডাউনলোড করুন।</p>
 				<p>সাথে হ্যাশট্যাগ ব্যবহার করুন 
-				<span onclick="copyHashtag()" class="text-yellow-600 font-bold cursor-pointer hover:text-yellow-800">#NoBoatNoVote</span>
+				<span onclick="copyHashtag()" class="text-yellow-600 font-bold cursor-pointer hover:text-yellow-800">#IAmAwamiLeague</span>
             </div>
 
             <div class="lg:w-1/2 w-full max-w-lg glass-panel p-8 rounded-[2rem] shadow-2xl">
                 
                 <div id="canvas-container" class="mb-8 border border-white/10">
                     <canvas id="photoCanvas"></canvas>
-                    <div id="placeholder-text" class="absolute inset-0 flex flex-col items-center justify-center text-red-100/30 font-medium pointer-events-none">
+                    <div id="placeholder-text" class="absolute inset-0 flex flex-col items-center justify-center text-green-100/30 font-medium pointer-events-none">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-2 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -63,18 +64,18 @@
                     <div id="controls-panel" class="space-y-5 bg-black/20 p-6 rounded-2xl border border-white/5 hidden-controls">
                         <div>
                             <div class="flex justify-between items-center mb-3 px-1">
-                                <label class="text-xs font-bold uppercase tracking-widest text-red-300">জুম কন্ট্রোল</label>
+                                <label class="text-xs font-bold uppercase tracking-widest text-green-300">জুম কন্ট্রোল</label>
                                 <span id="zoomPercent" class="value-badge">১০০%</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <button onclick="adjust('zoom', -0.02)" class="step-btn">-</button>
-                                <input type="range" id="zoom" min="0.1" max="5" step="0.01" value="0.79" class="custom-slider">
+                                <input type="range" id="zoom" min="0.1" max="5" step="0.01" value="0.90" class="custom-slider">
                                 <button onclick="adjust('zoom', 0.02)" class="step-btn">+</button>
                             </div>
                         </div>
                         
                         <div>
-                            <label class="text-xs font-bold uppercase tracking-widest text-red-300 block mb-3 text-center">ডানে-বামে সরান</label>
+                            <label class="text-xs font-bold uppercase tracking-widest text-green-300 block mb-3 text-center">ডানে-বামে সরান</label>
                             <div class="flex items-center gap-3">
                                 <button onclick="adjust('posX', -5)" class="step-btn">-</button>
                                 <input type="range" id="posX" min="-1000" max="1000" value="0" class="custom-slider">
@@ -83,7 +84,7 @@
                         </div>
 
                         <div>
-                            <label class="text-xs font-bold uppercase tracking-widest text-red-300 block mb-3 text-center">উপরে-নিচে সরান</label>
+                            <label class="text-xs font-bold uppercase tracking-widest text-green-300 block mb-3 text-center">উপরে-নিচে সরান</label>
                             <div class="flex items-center gap-3">
                                 <button onclick="adjust('posY', -5)" class="step-btn">-</button>
                                 <input type="range" id="posY" min="-1000" max="1000" value="0" class="custom-slider">
@@ -103,10 +104,10 @@
         </div>
     </main>
 
-    <footer class="w-full bg-black/30 py-8 border-t border-red-900/30 mt-auto">
+    <footer class="w-full bg-black/30 py-8 border-t border-green-900/30 mt-auto">
         <div class="container mx-auto text-center">
-            <p class="text-red-200/50 font-medium tracking-widest uppercase text-xs">
-                Made with <span class="text-red-600 animate-pulse">❤️</span> from <a target="blank" href="https://www.facebook.com/AntiBDAwamiLeagueABAL">Pro ALBD</a>.
+            <p class="text-green-200/50 font-medium tracking-widest uppercase text-xs">
+                Made with <span class="text-green-600 animate-pulse">❤️</span> from <a target="blank" href="https://www.facebook.com/awamileague.1949">Pro ALBD</a>.
             </p>
         </div>
     </footer>
@@ -116,12 +117,22 @@
         <div class="bg-white text-black p-6 rounded-2xl max-w-sm w-full text-center space-y-4">
             <h3 class="font-bold text-xl">ডাউনলোড সমস্যা?</h3>
             <p class="text-sm text-gray-600">ফেসবুক ব্রাউজারে ডাউনলোড না হলে, উপরে ডানে থাকা তিন ডট (⋮) মেনুতে ক্লিক করে "Open in Browser" বা "Chrome-এ ওপেন করুন" সিলেক্ট করুন।</p>
-            <button onclick="document.getElementById('custom-alert').style.display='none'" class="w-full bg-red-600 text-white py-3 rounded-xl font-bold">বুঝেছি</button>
+            <button onclick="document.getElementById('custom-alert').style.display='none'" class="w-full bg-green-600 text-white py-3 rounded-xl font-bold">বুঝেছি</button>
         </div>
     </div>
 
 <script src="scripts.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(reg => console.log('Service Worker registered', reg))
+      .catch(err => console.log('Service Worker failed', err));
+  });
+}
+</script>
 </body>
+
 
 </html>
 
